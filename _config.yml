@@ -73,7 +73,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://github.com/xiehaoqiang/xiehaoqiang.github.io/tree/main/_posts/imgs/testimg.jpg
+avatar: https://xie-aliyun-img.oss-cn-beijing.aliyuncs.com/img/testimg.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
