@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Load your spectrum data'
+title: Load your spectrum data
 date: 2024-01-07 15:48 +0800
 categories: [Blogging, Tools]
 tags: [Raman tools, python]
