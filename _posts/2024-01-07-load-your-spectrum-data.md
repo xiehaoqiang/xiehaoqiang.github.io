@@ -8,7 +8,7 @@ tags:[Raman tools, python]
 math: true
 
 image:
-  path:https://xie-aliyun-img.oss-cn-beijing.aliyuncs.com/img/Raman_tools_1.png
+  path: https://xie-aliyun-img.oss-cn-beijing.aliyuncs.com/img/Raman_tools_1.jpg
   alt: Load your spectrum data
 
 ---
