@@ -46,7 +46,7 @@ pip install sif_parser
 
 ## 1. 函数定义及使用
 
-> 在本系列中，“函数定义及使用”板块将直接列举使用的python库、定义的函数、使用示例三个板块，如果读者不想了解函数实现细节，直接将该板块的代码复制到自己的python环境当中，并且将使用示例稍作修改即可实现
+> 在本系列中，“函数定义及使用”板块将直接列举使用的python库、定义的函数、使用示例三个板块，如果读者不想了解函数实现细节，直接将该板块的代码复制到自己的python环境当中，并且将使用示例稍作修改即可。
 
 本文使用的python库函数如下：
 
@@ -122,7 +122,7 @@ data_path = r"..\data\spectrum_1.sif"
 begin_label = 200
 end_label = 2000
 laser_wavelength = 785 # 读取Andor的sif文件软件所需，因为要进行波长转换
-x_axis = "Raman shift" # 如果读取的光谱横坐标为"wavelength"，则该部分可修改为"Raman shift"
+x_axis = "Raman shift" # 如果读取的光谱横坐标为"wavelength"，则该部分可修改为"Wavelength"
 
 # 读取光谱
 data=get_spectrum(data_path, begin_label,end_label,laser_wavelength,x_axis)
@@ -140,7 +140,7 @@ intensity = data["Intensity"]
 # intensity = preprocessing(intensity) # 假设光谱数据经过预处理
 
 # 绘制简单的拉曼光谱图像
-plot_spectrum(data["Raman shift"],data["Intensity"])
+plot_spectrum(shift,intensity)
 
 # 存储数据
 data = pd.DataFrame({"Raman shift":shift,"Intensity":intensity})
