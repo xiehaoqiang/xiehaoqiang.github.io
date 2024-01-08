@@ -44,7 +44,7 @@ Raman tools，顾名思义，就是从事拉曼光谱研究过程中可以使用
 
 下面列举本系列写作进度，写作完成的文章链接也会更新在此处（按小节划分）（主要作用是逼自己一把）：
 
-- [ ] 拉曼光谱的导入：[Load your spectrum data | 星游云际&](https://xiehaoqiang.github.io/posts/load-your-spectrum-data/)
+- [ ] 拉曼光谱的导入：[Load your spectrum data](https://xiehaoqiang.github.io/posts/load-your-spectrum-data/)
 
   - [x] 支持的拉曼光谱格式；
   - [x] 支持的拉曼光谱格式，及数据表现形式；
