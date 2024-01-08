@@ -122,7 +122,7 @@ data_path = r"..\data\spectrum_1.sif"
 begin_label = 200
 end_label = 2000
 laser_wavelength = 785 # 读取Andor的sif文件软件所需，因为要进行波长转换
-x_axis = "Raman shift" # 如果读取的光谱横坐标为"wavelength"，则该部分可修改为"Wavelength"
+x_axis = "Raman shift" # 如果读取的光谱横坐标为"Wavelength"，则该部分可修改为"Wavelength"
 
 # 读取光谱
 data=get_spectrum(data_path, begin_label,end_label,laser_wavelength,x_axis)
