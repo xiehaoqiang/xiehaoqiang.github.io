@@ -10,10 +10,7 @@ math: true
 image:
   path: https://xie-aliyun-img.oss-cn-beijing.aliyuncs.com/img/Raman_tools_1.jpg
   alt: Load your spectrum data
-
 ---
-
-
 数据分析的第一步就是导入数据。但是，在光谱数据的导入过程中往往存在以下问题，影响数据的分析过程，如①不同的文件格式让不同的数据导入很复杂；②难以批量导入整个文件夹的光谱数据。为了让数据导入的过程更加简单易操作，本文使用python构建了一些工具函数，可以实现不同格式的单张光谱/光谱数据文件夹的数据导入，并且可以存储经过处理的光谱数据为.csv文件格式，方便后续分析。
 
 ## 0. 写在前面
@@ -30,19 +27,18 @@ pip install sif_parser
 其中natsort的作用为将文件夹中的文件名按照自然顺序进行排序，sif_parser的作用为读取Andor光谱仪的sif光谱文件。两个工具包的官方文档如下，欢迎查看：
 
 - natsort：[natsort · PyPI](https://pypi.org/project/natsort/)
-
 - sif_parser：[sif-parser · PyPI](https://pypi.org/project/sif-parser/)
 
 本文更新的函数列表如下：
 
-| 函数名                   | 函数作用                                                     |
-| ------------------------ | ------------------------------------------------------------ |
-| Ramanshift_Cal           | 波长-拉曼位移转换器，将波长转换为拉曼位移                    |
-| Wavelength_Cal           | 拉曼位移-波长转换器，将拉曼位移转换为波长                    |
+| 函数名                   | 函数作用                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| Ramanshift_Cal           | 波长-拉曼位移转换器，将波长转换为拉曼位移                                                   |
+| Wavelength_Cal           | 拉曼位移-波长转换器，将拉曼位移转换为波长                                                   |
 | get_spectrum             | 读取光谱文件（暂时支持.asc，.txt，.csv，.sif格式的光谱文件读取），生成DataFrame格式光谱数据 |
-| get_spectrum_from_folder | 从文件夹中批量读取光谱文件（排序按照文件名称顺序）           |
-| save_spectrum            | 保存光谱数据                                                 |
-| plot_spectrum            | 使用光谱数据绘制简单的光谱图像                               |
+| get_spectrum_from_folder | 从文件夹中批量读取光谱文件（排序按照文件名称顺序）                                          |
+| save_spectrum            | 保存光谱数据                                                                                |
+| plot_spectrum            | 使用光谱数据绘制简单的光谱图像                                                              |
 
 ## 1. 函数定义及使用
 
@@ -65,7 +61,7 @@ from natsort import natsorted
 def Ramanshift_Cal(lambda_out,lambda_in):
     Raman_shift = 10**7/lambda_in - 10**7/lambda_out
     return Raman_shift
-    
+  
 def Wavelength_Cal(raman_shift,lambda_in):
     Wavelength = 1/(1/lambda_in-raman_shift/10**7)
     return Wavelength
@@ -194,7 +190,9 @@ data_list[0] # 代表数据列表中的第一个光谱数据
 
 数据导入部分到此暂告一段落，通过以上函数已经能够实现常见光谱文件的读取。当然，一些情况仍旧没有考虑周全，暂时放在以下待更新列表当中：
 
-- [ ]  多光谱数据文件的导入；
-- [ ]  光谱绘图风格的设置；
+- [ ] 多光谱数据文件的导入；
+- [ ] 光谱绘图风格的设置；
 
 如若有其他问题，欢迎发送邮件交流！
+
+换电脑test.
